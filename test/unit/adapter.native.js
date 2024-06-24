@@ -27,17 +27,17 @@ describe('adapter', function() {
         assert(!err);
 
         // Attempt to insert a document
-        collection.insertOne({hello: 'world'}, function(err, objects) {
+        collection.insertOne({hello: 'world'}).catch((err)=>{
           assert(!err);
-
+        }).then((objects)=>{
           // check that the record was actually inserted
-          collection.findOne({ hello: 'world' }, function(err, doc) {
+          collection.findOne({ hello: 'world' }).catch((err)=>{
             assert(!err);
+          }).then((doc)=>{
             assert(doc.hello === 'world');
-
-            done(err);
-          });
-        });
+            done();
+          })
+        })
       });
     });
   });

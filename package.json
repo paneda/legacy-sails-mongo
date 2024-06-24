@@ -1,6 +1,6 @@
 {
   "name": "sails-mongo",
-  "version": "0.12.5",
+  "version": "0.12.6",
   "description": "Mongo DB adapter for Sails.js",
   "main": "./lib/adapter.js",
   "scripts": {
@@ -43,10 +43,10 @@
     "url": "git://github.com/balderdashy/sails-mongo.git"
   },
   "dependencies": {
-    "@sailshq/lodash": "^3.10.2",
-    "async": "2.6.4",
-    "mongodb": "3.7.4",
-    "validator": "4.5.1",
+    "@sailshq/lodash": "3.10.4",
+    "async": "3.2.5",
+    "mongodb": "6.6.2",
+    "validator": "13.11.0",
     "waterline-cursor": "0.0.7",
     "waterline-errors": "0.10.1"
   },
@@ -54,6 +54,14 @@
     "captains-log": "^1.0.2",
     "mocha": "3.0.2",
     "waterline-adapter-tests": "~0.12.1"
+  },
+  "engines": {
+    "node": ">=18.18.1"
+  },
+  "overrides": {
+    "waterline-cursor": {
+      "lodash": "3.10.1"
+    }
   },
   "waterlineAdapter": {
     "waterlineVersion": "~0.10.0",
