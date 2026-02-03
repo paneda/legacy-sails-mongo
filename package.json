@@ -45,7 +45,7 @@
   "dependencies": {
     "@sailshq/lodash": "3.10.4",
     "async": "3.2.5",
-    "mongodb": "6.6.2",
+    "mongodb": "^6.20.0",
     "validator": "13.11.0",
     "waterline-cursor": "0.0.7",
     "waterline-errors": "0.10.1"
@@ -56,7 +56,7 @@
     "waterline-adapter-tests": "~0.12.1"
   },
   "engines": {
-    "node": ">=18.18.1"
+    "node": ">=16.20.0"
   },
   "overrides": {
     "waterline-cursor": {
